@@ -6,7 +6,9 @@ import Gradient from "./Gradient/Gradient";
 
 class App extends Component {
   state = {
-    title: "Hello World"
+    title: "Hello World",
+    color1: "#000000",
+    color2: "#ffffff"
   };
 
   changeTitle = newTitle => {
@@ -16,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Gradient />
+        <Gradient color1={this.state.color1} color2={this.state.color2} />
 
 
         <Example
