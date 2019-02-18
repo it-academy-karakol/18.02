@@ -15,10 +15,23 @@ class App extends Component {
     this.setState({ title: newTitle });
   }
 
+  changeColor1 = color => {
+    this.setState({ color1: color });
+  }
+
+  changeColor2 = color => {
+    this.setState({ color2: color });
+  }
+
   render() {
     return (
       <div className="App">
-        <Gradient color1={this.state.color1} color2={this.state.color2} />
+        <Gradient
+          color1={this.state.color1}
+          color2={this.state.color2}
+          changeColor1={this.changeColor1}
+          changeColor2={this.changeColor2}
+          />
 
 
         <Example
